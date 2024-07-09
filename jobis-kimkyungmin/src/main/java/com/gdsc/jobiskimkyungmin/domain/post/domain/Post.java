@@ -2,16 +2,18 @@ package com.gdsc.jobiskimkyungmin.domain.post.domain;
 
 import com.gdsc.jobiskimkyungmin.domain.user.domain.User;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.List;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
+@Setter
+@Getter
+@RequiredArgsConstructor
+
 public class Post {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,6 +23,8 @@ public class Post {
 
     @Column(columnDefinition = "VARCHAR(500)")
     private String content;
+
+
 
     private int like;
 
