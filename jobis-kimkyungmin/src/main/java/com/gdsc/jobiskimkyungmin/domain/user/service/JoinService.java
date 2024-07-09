@@ -6,11 +6,11 @@ import com.gdsc.jobiskimkyungmin.domain.user.domain.repository.UserRepository;
 import com.gdsc.jobiskimkyungmin.domain.user.dto.UserDto;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-public class UserService {
+public class JoinService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder){
+    public JoinService(UserRepository userRepository, PasswordEncoder passwordEncoder){
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
