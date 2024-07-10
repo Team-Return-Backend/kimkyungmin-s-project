@@ -9,6 +9,6 @@ import java.util.Optional;
 
 public interface PostRepository extends JpaRepository<Post,Long> {
     // 최신순 검색
-    @Query("SELECT u FROM Post u WHERE u.title LIKE %:title% ORDER BY u.id DESC")
+    @Query("SELECT post FROM Post post WHERE post.title LIKE %:title% ORDER BY post.id DESC")
     List<Post> findByTitle(String title);
 }

@@ -1,10 +1,13 @@
 package com.gdsc.jobiskimkyungmin.domain.user.domain;
 
+import com.gdsc.jobiskimkyungmin.domain.global.security.auth.AuthDetails;
 import com.gdsc.jobiskimkyungmin.domain.post.domain.Post;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.GeneratedColumn;
+import org.springframework.security.core.GrantedAuthority;
 
+import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -29,5 +32,8 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Post> post;
 
-
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        // 권한 로직을 구현합니다.
+        return null;
+    }
 }
