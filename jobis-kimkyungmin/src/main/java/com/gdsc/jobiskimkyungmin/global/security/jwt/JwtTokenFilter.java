@@ -1,4 +1,4 @@
-package com.gdsc.jobiskimkyungmin.domain.global.security.jwt;
+package com.gdsc.jobiskimkyungmin.global.security.jwt;
 
 
 import jakarta.servlet.FilterChain;

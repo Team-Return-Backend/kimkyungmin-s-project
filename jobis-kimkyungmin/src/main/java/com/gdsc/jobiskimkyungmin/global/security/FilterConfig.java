@@ -1,12 +1,12 @@
-package com.gdsc.jobiskimkyungmin.domain.global.security;
+package com.gdsc.jobiskimkyungmin.global.security;
 
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import com.gdsc.jobiskimkyungmin.domain.global.security.jwt.JwtTokenFilter;
+import com.gdsc.jobiskimkyungmin.global.security.jwt.JwtTokenFilter;
 
-import com.gdsc.jobiskimkyungmin.domain.global.security.jwt.JwtTokenProvider;
+import com.gdsc.jobiskimkyungmin.global.security.jwt.JwtTokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

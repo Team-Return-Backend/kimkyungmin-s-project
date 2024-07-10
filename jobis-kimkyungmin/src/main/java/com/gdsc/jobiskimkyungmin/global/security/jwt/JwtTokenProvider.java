@@ -1,8 +1,8 @@
-package com.gdsc.jobiskimkyungmin.domain.global.security.jwt;
+package com.gdsc.jobiskimkyungmin.global.security.jwt;
 
-import com.gdsc.jobiskimkyungmin.domain.global.security.auth.AuthDetailsService;
-import com.gdsc.jobiskimkyungmin.domain.auth.RefreshToken;
-import com.gdsc.jobiskimkyungmin.domain.auth.repository.RefreshTokenRepository;
+import com.gdsc.jobiskimkyungmin.global.security.auth.AuthDetailsService;
+import com.gdsc.jobiskimkyungmin.domain.auth.domian.RefreshToken;
+import com.gdsc.jobiskimkyungmin.domain.auth.domian.repository.RefreshTokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

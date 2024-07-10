@@ -1,12 +1,10 @@
 package com.gdsc.jobiskimkyungmin.domain.user.domain;
 
-import com.gdsc.jobiskimkyungmin.domain.post.domain.Post;
+import com.gdsc.jobiskimkyungmin.domain.feed.domain.Post;
 import com.gdsc.jobiskimkyungmin.domain.user.domain.type.Role;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.security.core.GrantedAuthority;
 
-import java.util.Collection;
 import java.util.List;
 
 @Entity
@@ -14,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Getter
-public class User {
+public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -31,8 +29,4 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Post> post;
 
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        // 권한 로직을 구현합니다.
-        return null;
-    }
 }

@@ -1,6 +1,5 @@
-package com.gdsc.jobiskimkyungmin.domain.global.security.auth;
+package com.gdsc.jobiskimkyungmin.global.security.auth;
 
-import com.gdsc.jobiskimkyungmin.domain.user.domain.User;
 import com.gdsc.jobiskimkyungmin.domain.user.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 @Service
 @Transactional(readOnly = true)
-public class AuthDetailsService implements UserDetailsService {
+public class AuthDetailsService implements UserDetailsService{
 
     private final UserRepository userRepository;
 

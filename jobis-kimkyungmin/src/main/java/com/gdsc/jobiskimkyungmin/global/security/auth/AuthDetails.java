@@ -1,10 +1,13 @@
-package com.gdsc.jobiskimkyungmin.domain.global.security.auth;
+package com.gdsc.jobiskimkyungmin.global.security.auth;
 
 import com.gdsc.jobiskimkyungmin.domain.user.domain.User;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 public class AuthDetails implements UserDetails {
     private final User user;
@@ -15,8 +18,16 @@ public class AuthDetails implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        // 권한 로직을 구현합니다.
-        return user.getAuthorities();
+//        List<GrantedAuthority> authorities = new ArrayList<>();
+//        authorities.add(new SimpleGrantedAuthority(user.getAuthorities().getClass().getName()));
+//        return authorities;
+
+            Collection<GrantedAuthority> collectors = new ArrayList<>();
+            collectors.add(()->{return "ROLE_"+user.getRole();}); //add에 들어올 파라미터는 GrantedAuthority밖에 없으니
+
+            return collectors;
+
+
     }
 
     @Override
