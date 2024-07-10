@@ -1,10 +1,8 @@
-package com.gdsc.jobiskimkyungmin.domain.post.domain;
+package com.gdsc.jobiskimkyungmin.domain.feed.domain;
 
 import com.gdsc.jobiskimkyungmin.domain.user.domain.User;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.List;
 
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -13,6 +11,13 @@ import java.util.List;
 @RequiredArgsConstructor
 
 public class Post {
+    @Builder
+    public Post(String title, String content, int like, User user) {
+        this.title = title;
+        this.content = content;
+        this.like = like;
+        this.user = user;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

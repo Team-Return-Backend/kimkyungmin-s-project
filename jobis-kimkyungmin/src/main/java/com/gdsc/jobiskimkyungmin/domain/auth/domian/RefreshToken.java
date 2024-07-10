@@ -1,4 +1,4 @@
-package com.gdsc.jobiskimkyungmin.domain.auth;
+package com.gdsc.jobiskimkyungmin.domain.auth.domian;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

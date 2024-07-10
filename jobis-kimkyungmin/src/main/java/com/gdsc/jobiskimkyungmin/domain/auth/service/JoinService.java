@@ -1,4 +1,4 @@
-package com.gdsc.jobiskimkyungmin.domain.user.service;
+package com.gdsc.jobiskimkyungmin.domain.auth.service;
 
 import com.gdsc.jobiskimkyungmin.domain.user.domain.type.Role;
 import com.gdsc.jobiskimkyungmin.domain.user.domain.User;
