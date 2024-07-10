@@ -3,6 +3,7 @@ package com.gdsc.jobiskimkyungmin.domain.global.security.jwt;
 import com.gdsc.jobiskimkyungmin.domain.global.security.auth.AuthDetailsService;
 import com.gdsc.jobiskimkyungmin.domain.global.security.domain.refreshtoken.RefreshToken;
 import com.gdsc.jobiskimkyungmin.domain.global.security.domain.refreshtoken.repository.RefreshTokenRepository;
+import com.gdsc.jobiskimkyungmin.domain.global.security.jwt.JwtProperties;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
@@ -20,7 +21,7 @@ import java.util.Date;
 
 @Component
 @RequiredArgsConstructor
-class JwtTokenProvider {
+public class JwtTokenProvider {
 
     private final JwtProperties jwtProperties;
     private final AuthDetailsService authDetailsService;
