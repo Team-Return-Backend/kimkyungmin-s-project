@@ -1,5 +1,4 @@
 package com.gdsc.jobiskimkyungmin.domain.user.dto;
-import com.gdsc.jobiskimkyungmin.domain.user.domain.Role;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

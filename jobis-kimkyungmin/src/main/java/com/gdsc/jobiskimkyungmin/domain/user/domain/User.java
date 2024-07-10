@@ -1,10 +1,9 @@
 package com.gdsc.jobiskimkyungmin.domain.user.domain;
 
-import com.gdsc.jobiskimkyungmin.domain.global.security.auth.AuthDetails;
 import com.gdsc.jobiskimkyungmin.domain.post.domain.Post;
+import com.gdsc.jobiskimkyungmin.domain.user.domain.type.Role;
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.GeneratedColumn;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;

@@ -1,6 +1,6 @@
 package com.gdsc.jobiskimkyungmin.domain.user.service;
 
-import com.gdsc.jobiskimkyungmin.domain.user.domain.Role;
+import com.gdsc.jobiskimkyungmin.domain.user.domain.type.Role;
 import com.gdsc.jobiskimkyungmin.domain.user.domain.User;
 import com.gdsc.jobiskimkyungmin.domain.user.domain.repository.UserRepository;
 import com.gdsc.jobiskimkyungmin.domain.user.dto.UserDto;
