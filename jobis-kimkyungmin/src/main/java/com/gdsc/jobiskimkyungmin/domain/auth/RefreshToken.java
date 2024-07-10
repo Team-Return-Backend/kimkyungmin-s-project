@@ -1,4 +1,4 @@
-package com.gdsc.jobiskimkyungmin.domain.global.security.domain.refreshtoken;
+package com.gdsc.jobiskimkyungmin.domain.auth;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
