@@ -1,6 +1,6 @@
-package com.gdsc.jobiskimkyungmin.domain.feed.domain.repository;
+package com.gdsc.jobiskimkyungmin.domain.post.domain.repository;
 
-import com.gdsc.jobiskimkyungmin.domain.feed.domain.Post;
+import com.gdsc.jobiskimkyungmin.domain.post.domain.Post;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

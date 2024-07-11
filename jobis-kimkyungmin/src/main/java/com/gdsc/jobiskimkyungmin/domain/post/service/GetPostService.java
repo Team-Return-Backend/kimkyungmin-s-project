@@ -1,8 +1,8 @@
-package com.gdsc.jobiskimkyungmin.domain.feed.service;
+package com.gdsc.jobiskimkyungmin.domain.post.service;
 
-import com.gdsc.jobiskimkyungmin.domain.feed.domain.Post;
-import com.gdsc.jobiskimkyungmin.domain.feed.domain.repository.PostRepository;
-import com.gdsc.jobiskimkyungmin.domain.feed.dto.request.GetPostDto;
+import com.gdsc.jobiskimkyungmin.domain.post.domain.Post;
+import com.gdsc.jobiskimkyungmin.domain.post.domain.repository.PostRepository;
+import com.gdsc.jobiskimkyungmin.domain.post.dto.request.GetPostDto;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;

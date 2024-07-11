@@ -1,4 +1,4 @@
-package com.gdsc.jobiskimkyungmin.domain.feed.domain;
+package com.gdsc.jobiskimkyungmin.domain.post.domain;
 
 import com.gdsc.jobiskimkyungmin.domain.user.domain.User;
 import jakarta.persistence.*;

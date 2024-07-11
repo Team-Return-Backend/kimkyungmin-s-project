@@ -1,6 +1,6 @@
 package com.gdsc.jobiskimkyungmin.domain.user.domain;
 
-import com.gdsc.jobiskimkyungmin.domain.feed.domain.Post;
+import com.gdsc.jobiskimkyungmin.domain.post.domain.Post;
 import com.gdsc.jobiskimkyungmin.domain.user.domain.type.Role;
 import jakarta.persistence.*;
 import lombok.*;

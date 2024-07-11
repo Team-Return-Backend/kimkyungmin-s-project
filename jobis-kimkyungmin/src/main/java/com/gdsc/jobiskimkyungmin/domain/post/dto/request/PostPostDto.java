@@ -1,4 +1,4 @@
-package com.gdsc.jobiskimkyungmin.domain.feed.dto.request;
+package com.gdsc.jobiskimkyungmin.domain.post.dto.request;
 
 import com.gdsc.jobiskimkyungmin.domain.user.domain.User;
 import lombok.AllArgsConstructor;
@@ -8,11 +8,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class GetPostDto {
-
-    private Long id;
+public class PostPostDto {
+    private User user;
     private String title;
     private String content;
-    private int like;
-    private User user;
 }

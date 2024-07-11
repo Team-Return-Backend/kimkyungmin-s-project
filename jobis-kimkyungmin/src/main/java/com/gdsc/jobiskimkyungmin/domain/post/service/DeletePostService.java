@@ -1,6 +1,6 @@
-package com.gdsc.jobiskimkyungmin.domain.feed.service;
+package com.gdsc.jobiskimkyungmin.domain.post.service;
 
-import com.gdsc.jobiskimkyungmin.domain.feed.domain.repository.PostRepository;
+import com.gdsc.jobiskimkyungmin.domain.post.domain.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
