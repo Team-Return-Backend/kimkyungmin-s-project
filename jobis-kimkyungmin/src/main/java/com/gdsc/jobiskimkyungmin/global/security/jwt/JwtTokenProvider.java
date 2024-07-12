@@ -20,17 +20,19 @@ import java.util.Date;
 
 @Component
 @RequiredArgsConstructor
+
 public class JwtTokenProvider {
 
-    private final JwtProperties jwtProperties;
+    private final JwtProperties jwtProperties; // 의존성 추가
     private final AuthDetailsService authDetailsService;
     private final RefreshTokenRepository refreshTokenRepository;
 
-    public String generateAccessToken(String id) {
+    public String generateAccessToken(String id) { // AcessToken을 만들어주는 메소드
         return generateToken(id, "access", jwtProperties.getAccessExp());
+        // generateToken에 id, "acess", AcessExp()를 준다
     }
 
-    public String generateRefreshToken(String id) {
+    public String generateRefreshToken(String id) { // refreshToken을 만들어주는 메소드
         String refreshToken = generateToken(id, "refresh", jwtProperties.getRefreshExp());
         refreshTokenRepository.save(RefreshToken.builder()
                 .accountId(id)
@@ -42,13 +44,16 @@ public class JwtTokenProvider {
     }
 
     private String generateToken(String id, String type, Long exp) {
+
+        // generateAcessToken을 만들어주는 실제 메소드
+
         return Jwts.builder()
                 .signWith(SignatureAlgorithm.HS256, jwtProperties.getSecretKey())
                 .setSubject(id)
                 .claim("type", type)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + exp * 1000))
-                .compact();
+                 .compact();
     }
 
     public String resolveToken(HttpServletRequest request) {
