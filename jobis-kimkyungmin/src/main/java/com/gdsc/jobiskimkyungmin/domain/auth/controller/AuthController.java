@@ -16,12 +16,12 @@ public class AuthController {
     @PostMapping("/register")
     public ResponseEntity<String> register(String username, String password, Role role) {
         authService.register(username, password, role);
-        return ResponseEntity.ok("User registered successfully");
+        return ResponseEntity.ok("User registered successfully"); // 유저 인증 성공 여부 반환
     }
 
     @PostMapping("/login")
     public ResponseEntity<String> login(String username, String password) {
         String token = authService.authenticate(username, password);
-        return ResponseEntity.ok(token);
+        return ResponseEntity.ok(token); // 유저 인가 성공 여부 반환(token을 통해서 반환)
     }
 }

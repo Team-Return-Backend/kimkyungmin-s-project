@@ -11,13 +11,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RefreshToken {
     @Id
-    private String accountId;
+    private String username;
     private String token;
     private Long timeToLive;
 
     @Builder
-    public RefreshToken(String accountId, String token, Long timeToLive) {
-        this.accountId = accountId;
+    public RefreshToken(String username, String token, Long timeToLive) {
+        this.username = username;
         this.token = token;
         this.timeToLive = timeToLive;
     }

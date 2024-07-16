@@ -1,6 +1,0 @@
-jwt:
-  secret-key: "your-secret-key"
-  access-exp: 3600
-  refresh-exp: 7200
-  header: "Authorization"
-  prefix: "Bearer "

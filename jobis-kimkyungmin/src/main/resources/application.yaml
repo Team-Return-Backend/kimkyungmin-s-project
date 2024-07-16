@@ -1,0 +1,18 @@
+jwt:
+  secret-key: "wild-boar"
+  access-exp: 3600
+  refresh-exp: 7200
+  header: "Authorization"
+  prefix: "Bearer "
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/kyungstagram
+    username: root
+    password: a1b2c3!!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    show-sql: true

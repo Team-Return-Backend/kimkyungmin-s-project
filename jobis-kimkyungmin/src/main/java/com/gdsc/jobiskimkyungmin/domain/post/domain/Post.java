@@ -8,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Setter
 @Getter
-@RequiredArgsConstructor
+
 
 public class Post {
     @Builder
