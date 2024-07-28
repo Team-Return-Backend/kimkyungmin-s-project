@@ -2,6 +2,7 @@ package com.gdsc.jobiskimkyungmin.global.security.auth;
 
 import com.gdsc.jobiskimkyungmin.domain.user.domain.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -19,7 +20,7 @@ public class AuthDetailsService implements UserDetailsService{
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         // user이름을 통해 유저의 정보를 가져오는 메소드
         return userRepository.findByUsername(username) // userRepository에서 유저 이름을 찾는다.
-                .map(AuthDetails::new) // smd딸
+                .map((User user) -> new AuthDetails(new com.gdsc.jobiskimkyungmin.domain.user.domain.User()))
                 .orElseThrow(() -> new UsernameNotFoundException("not found"));
     }
 }

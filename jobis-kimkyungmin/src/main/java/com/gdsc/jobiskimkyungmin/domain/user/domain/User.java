@@ -1,32 +1,31 @@
 package com.gdsc.jobiskimkyungmin.domain.user.domain;
 
-import com.gdsc.jobiskimkyungmin.domain.post.domain.Post;
-import com.gdsc.jobiskimkyungmin.domain.user.domain.type.Role;
+
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-import java.util.List;
-
+@Table(name="tbl_user")
 @Entity
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@AllArgsConstructor
-@Builder
+@NoArgsConstructor
 @Getter
-public class User{
+public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long Id;
+    @Column(columnDefinition = "VARCHAR(50)")
+    private String accountId;
+    @Column(columnDefinition = "VARCHAR(50)")
+    private String passowrd;
+    @Column(columnDefinition = "VARCHAR(80)")
+    private String email;
 
-    @Column(columnDefinition = "VARCHAR(20)")
-    private String username;
-
-    @Column(columnDefinition = "VARCHAR(25)")
-    private String password;
-
-    //새로 추가
-    private Role role;
-
-    @OneToMany(mappedBy = "user")
-    private List<Post> post;
-
+    @Builder
+    public User(String accountId, String passowrd, String email) {
+        this.accountId = accountId;
+        this.passowrd = passowrd;
+        this.email = email;
+    }
 }

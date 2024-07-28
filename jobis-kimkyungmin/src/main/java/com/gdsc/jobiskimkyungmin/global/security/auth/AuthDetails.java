@@ -22,22 +22,19 @@ public class AuthDetails implements UserDetails {
 //        authorities.add(new SimpleGrantedAuthority(user.getAuthorities().getClass().getName()));
 //        return authorities;
 
-            Collection<GrantedAuthority> collectors = new ArrayList<>();
-            collectors.add(()->{return "ROLE_"+user.getRole();}); //add에 들어올 파라미터는 GrantedAuthority밖에 없으니
-
-            return collectors;
+            return null;
 
 
     }
 
     @Override
     public String getPassword() {
-        return user.getPassword();
+        return user.getPassowrd();
     }
 
     @Override
     public String getUsername() {
-        return user.getUsername();
+        return user.getAccountId();
     }
 
     @Override
