@@ -17,7 +17,7 @@ public class RefreshToken {
     private String token;
     private Long timeToLive;
 
-    @Builder
+   
     public RefreshToken(String accountId, String token, Long timeToLive) {
         this.accountId = accountId;
         this.token = token;
